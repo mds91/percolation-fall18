@@ -39,8 +39,34 @@ grid	mean	stddev	time
 
 1. How does doubling the grid size affect running time (keeping # trials fixed)
 
+Doubling the grid size increases the running time when # of trials is fixed by 
+what seems to be a factor of 6 or 7.
+
 
 2. How does doubling the number of trials affect running time.
+
+40 trials for BFS
+simulation data for 40 trials
+grid	mean	stddev	time
+100		0.628	0.025	0.108
+200		0.606	0.016	0.177
+400		0.600	0.008	1.080
+800		0.598	0.005	7.604
+1600	0.597	0.004	41.301
+3200	0.595	0.002	245.557
+
+40 trials for UF
+simulation data for 40 trials
+grid	mean	stddev	time
+100		0.594	0.015	0.074
+200		0.591	0.009	0.143
+400		0.591	0.005	0.860
+800		0.593	0.004	5.197
+1600	0.593	0.002	26.195
+3200	0.593	0.001	147.388
+
+Doubling the number of trials approximately doubles the running time, comparing the 
+results with 20 trials.
 
 
 3. Estimate the largest grid size you can run in 24 hours with 20 trials. Explain your reasoning.

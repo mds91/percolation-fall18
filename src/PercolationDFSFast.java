@@ -1,6 +1,7 @@
 
 public class PercolationDFSFast extends PercolationDFS {
 
+	//constructor that calls super on size
 	public PercolationDFSFast(int size) {
 		super(size);
 	}
@@ -10,22 +11,24 @@ public class PercolationDFSFast extends PercolationDFS {
 		if (row == 0) {
 			dfs(row, col);		
 		}
-		if (col - 1 >= 0) {
+		//all of these else if's make sure current cell is in bounds
+		//if current cell is full, do dfs on the current cell
+		else if (col - 1 >= 0) {
 			if (isFull(row, col -1)) {
 				dfs(row, col);
 			}
 		}
-		if (col + 1 < myGrid.length) {
+		else if (col + 1 < myGrid.length) {
 			if (isFull(row, col + 1)) {
 				dfs(row, col);
 			}
 		}
-		if (row - 1 >= 0) {
+		else if (row - 1 >= 0) {
 			if (isFull(row - 1, col)) {
 				dfs(row, col);
 			}
 		}
-		if (row + 1 < myGrid.length) {
+		else if (row + 1 < myGrid.length) {
 			if (isFull(row + 1, col)) {
 				dfs(row, col);
 			}
