@@ -6,8 +6,8 @@ public class TestDFSPercolation {
 	
 	public IPercolate getDFSPercolater(int size) {
 		//return new PercolationDFS(size);
-		//return new PercolationDFSFast(size);
-		return new PercolationBFS(size);
+		return new PercolationDFSFast(size);
+		//return new PercolationBFS(size);
 	}
 	
 	/**
