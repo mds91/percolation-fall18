@@ -38,12 +38,14 @@ public class PercolationUF implements IPercolate {
 	
 	@Override
 	public void open(int row, int col) {
-		myOpenCount++;
-		// TODO Auto-generated method stub
 		if (! inBounds(row,col)) {
 			throw new IndexOutOfBoundsException(
 					String.format("(%d,%d) not in bounds", row,col));
 		}
+		if (isOpen(row, col)) {
+			return;
+		}
+		myOpenCount++;
 		myGrid[row][col] = OPEN;
 		//if in top row, union with VTOP
 		if (row == 0) {
