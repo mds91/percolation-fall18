@@ -38,6 +38,7 @@ public class PercolationUF implements IPercolate {
 	
 	@Override
 	public void open(int row, int col) {
+		myOpenCount++;
 		// TODO Auto-generated method stub
 		if (! inBounds(row,col)) {
 			throw new IndexOutOfBoundsException(
