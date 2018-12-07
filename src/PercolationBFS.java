@@ -6,6 +6,7 @@ public class PercolationBFS extends PercolationDFSFast{
 		super(size);
 	}
 	
+	@Override
 	public void dfs(int row, int col) {
 		if (! inBounds(row,col)) {
 			return;
